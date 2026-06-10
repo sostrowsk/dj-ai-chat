@@ -1,0 +1,13 @@
+{
+  "name": "dj-ai-chat-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "esbuild bundle for the ai_chat Django app (frontend/index.js -> ai_chat/static/ai_chat/chat.bundle.js). The bundle is committed; rebuild + commit after any JS change.",
+  "scripts": {
+    "build": "esbuild frontend/index.js --bundle --minify --outfile=ai_chat/static/ai_chat/chat.bundle.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "marked": "^14.1.3"
+  }
+}

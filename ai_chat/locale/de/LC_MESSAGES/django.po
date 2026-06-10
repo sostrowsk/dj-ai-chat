@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-10 14:40+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: consumers/chat.py:460
+msgid ""
+"Zu Ihrer Anfrage konnte ich in den verfügbaren Dokumenten keine relevanten "
+"Informationen finden. Bitte formulieren Sie Ihre Frage um oder stellen Sie "
+"eine Frage zu einem anderen Thema."
+msgstr ""
+
+#: models.py:19
+msgid "Allgemein"
+msgstr ""
+
+#: models.py:20
+msgid "Projekt"
+msgstr "Projekt"
+
+#: models.py:21
+msgid "Dokument"
+msgstr "Dokument"
+
+#: models.py:48
+msgid "Titel"
+msgstr ""
+
+#: models.py:51
+msgid "Automatisch aus erster Nachricht generiert"
+msgstr ""
+
+#: models.py:54
+msgid "System-Prompt"
+msgstr "System-Prompt"
+
+#: models.py:56
+msgid "Gerenderter System-Prompt-Snapshot fuer diese Session"
+msgstr ""
+
+#: models.py:63
+msgid "Chat-Session"
+msgstr "Chat-Session"
+
+#: models.py:64
+msgid "Chat-Sessions"
+msgstr "Chat-Sessions"
+
+#: models.py:100
+msgid "Benutzer"
+msgstr "Benutzer"
+
+#: models.py:101
+msgid "AI-Assistent"
+msgstr ""
+
+#: models.py:102
+msgid "System"
+msgstr "System"
+
+#: models.py:118
+msgid ""
+"RAG-Chunks mit Score/Seite; Chunk-Text auf 1000 Zeichen truncated — Volltext"
+" bleibt im Vector-Store reproduzierbar."
+msgstr ""
+
+#: models.py:125
+msgid "Liste der verwendeten Dokument-IDs und Scores"
+msgstr ""
+
+#: models.py:132
+msgid "LLM-Provider (z.B. bedrock, azure, vertex)"
+msgstr ""
+
+#: models.py:146
+msgid "Chat-Nachricht"
+msgstr ""
+
+#: models.py:147
+msgid "Chat-Nachrichten"
+msgstr ""
+
+#: models.py:183
+msgid "Alle fused-RRF-Scores vor dem Cutoff, absteigend"
+msgstr ""
+
+#: models.py:189
+msgid "rel_floor, elbow_drop, min_k, max_k, backend"
+msgstr ""
+
+#: models.py:195
+msgid "Retrieval-Log"
+msgstr "Retrieval-Log"
+
+#: models.py:196
+msgid "Retrieval-Logs"
+msgstr ""
+
+#: templates/ai_chat/chat.html:13
+msgid "Projects"
+msgstr "Projekte"
+
+#: templates/ai_chat/chat.html:31
+msgid "Documents"
+msgstr "Dokumente"
+
+#: templates/ai_chat/chat.html:54
+msgid "Back to the project"
+msgstr "Zurück zum Projekt"
+
+#: templates/ai_chat/chat.html:56
+msgid "Clear History"
+msgstr "Historie leeren"
+
+#: templates/ai_chat/chat.html:62
+msgid "Sources"
+msgstr "Quellen"
+
+#: templates/ai_chat/chat.html:63
+msgid "Score"
+msgstr "Score"
+
+#: templates/ai_chat/chat.html:64
+msgid "Page"
+msgstr "Seite"
+
+#: templates/ai_chat/chat.html:65
+msgid "Show all sources"
+msgstr "Alle Quellen anzeigen"
+
+#: templates/ai_chat/chat.html:66
+msgid "Show fewer sources"
+msgstr "Weniger Quellen anzeigen"
+
+#: templates/ai_chat/chat.html:69
+msgid "Type your message..."
+msgstr "Ihre Nachricht…"
+
+#: templates/ai_chat/chat.html:71
+msgid "Send"
+msgstr "Senden"

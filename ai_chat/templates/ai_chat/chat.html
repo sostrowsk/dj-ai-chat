@@ -1,0 +1,82 @@
+{% extends "base_container_fluid.html" %}
+{% load i18n static %}
+
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block content %}
+<div class="row mt-5">
+    <!-- Sidebar -->
+    <div class="col-md-3">
+        <!-- Projects Card -->
+        <div id="project-list" class="card">
+            <div class="card-header">
+                <h5 class="mb-0">{% translate "Projects" %}</h5>
+            </div>
+            <div class="card-body">
+                <div class="list-group">
+                    {% for project in project_list %}
+                        <a href="{% url "ai_chat:project_chat" project.id %}"
+                           class="list-group-item list-group-item-action {% if current_project.id == project.id %}active{% endif %}">
+                            {{ project.name }}
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        {% if current_project %}
+        <!-- Documents Card -->
+        <div id="documents-list" class="card mt-3">
+            <div class="card-header">
+                <h5 class="mb-0">{% translate "Documents" %}</h5>
+            </div>
+            <div class="card-body">
+                <div class="list-group">
+                    {% for doc in documents %}
+                        <a href="{% url "ai_chat:document_chat" doc.id %}"
+                           class="list-group-item list-group-item-action {% if current_document.id == doc.id %}active{% endif %}">
+                            {{ doc.name }}
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Main Chat Area -->
+    <div class="col-md-9">
+        <div class="card">
+            <div class="card-header d-flex align-items-center">
+                <h5 class="mb-0">{{ page_title }}</h5>
+
+                {% if current_project or current_document %}
+                    <a href="{% url "project:detail" current_project.id %}" class="btn btn-outline-brand btn-sm ms-3">{% translate "Back to the project" %}</a>
+                    <button id="clearHistory" class="btn btn-outline-danger btn-sm ms-auto">
+                        {% translate "Clear History" %}
+                    </button>
+                {% endif %}
+            </div>
+            <div class="card-body">
+                <div id="chatMessages" class="chat-container mb-3"
+                     data-label-sources="{% translate "Sources" %}"
+                     data-label-score="{% translate "Score" %}"
+                     data-label-page="{% translate "Page" %}"
+                     data-label-show-all-sources="{% translate "Show all sources" %}"
+                     data-label-show-fewer-sources="{% translate "Show fewer sources" %}"></div>
+                <div class="input-container">
+                    <input type="text" id="messageInput" class="form-control"
+                           placeholder="{% translate "Type your message..." %}">
+                    <button id="sendButton" class="btn btn-primary">
+                        {% translate "Send" %}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}{{ block.super }}
+<script src="{% static "ai_chat/chat.bundle.js" %}"></script>
+{% endblock %}

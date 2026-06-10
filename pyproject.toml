@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "dj-ai-chat"
+version = "0.1.0"
+description = "RAG-backed AI chat for Django: WebSocket (Channels) chat consumer with OTP gate, session/history management, retrieval source rendering and threshold tuning (app package `ai_chat`)."
+authors = ["Stefan Ostrowski <ostrowski@addvendo.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "ai_chat" }]
+include = [
+    { path = "ai_chat/templates/**/*", format = ["sdist", "wheel"] },
+    { path = "ai_chat/static/**/*", format = ["sdist", "wheel"] },
+    { path = "ai_chat/locale/**/*", format = ["sdist", "wheel"] },
+    { path = "frontend/**/*", format = ["sdist"] },
+    { path = "package.json", format = ["sdist"] },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.13,<3.14"
+django = "^5"
+channels = "^4"
+django-otp = "^1"
+django-two-factor-auth = "^1"
+pydantic = "^2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
